@@ -5,13 +5,13 @@
 if [ ! -d ~/.config/.zsh ]; then
     git clone https://github.com/AlexNecakov/.zsh ~/.config/.zsh
 else
-    cd ~/.zsh
+    cd ~/.config/.zsh
     git pull origin master
 fi
 
 # Symlink .zshrc if it doesn't exist or isn't a symlink
 if [ ! -L ~/.zshrc ] || [ ! -e ~/.zshrc ]; then
-    ln -sf ~/.config/.zsh/zshrc.sh ~/.zshrc
+    ln -sf ~/.config/.zsh/.zshrc ~/.zshrc
 fi
 
 echo "Zsh configuration synchronized."
