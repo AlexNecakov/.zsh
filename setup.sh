@@ -13,7 +13,7 @@ fi
 
 # Symlink .zshrc if it doesn't exist or isn't a symlink
 if [ ! -L ~/.zshrc ] || [ ! -e ~/.zshrc ]; then
-    ln -sf ./.zshrc ~/.zshrc
+    ln -sf ~/.config/.zsh/.zshrc ~/.zshrc
 fi
 
 popd
